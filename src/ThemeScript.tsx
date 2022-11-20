@@ -17,10 +17,10 @@ const getScript = (settings: ThemeSettings) => `
 
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
     if (prefersDark.matches) {
-      return ${getDefaultTheme(themeTypes.dark, settings.themes)};
+      return "${getDefaultTheme(themeTypes.dark, settings.themes)}";
     }
 
-    return ${getDefaultTheme(themeTypes.light, settings.themes)};
+    return "${getDefaultTheme(themeTypes.light, settings.themes)}";
   }
 
   const theme = getInitialTheme();
