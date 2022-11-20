@@ -23,17 +23,14 @@ const getScript = (settings: ThemeSettings) => `
     return "${getDefaultTheme(themeTypes.light, settings.themes)}";
   }
 
-  const theme = getInitialTheme();
   const themes = ${JSON.stringify(settings.themes)};
-  const root = document.documentElement;
-  root.classList.add(themes[theme].class);
+  document.documentElement.classList.add(themes[getInitialTheme()].class);
 
   document
-  .querySelector("meta[name='theme-color']")
-  .setAttribute("content", themes[theme].color);
+    .querySelector("meta[name='theme-color']")
+    .setAttribute("content", themes[theme].color);
 })();
 `;
-
 export interface ThemeScriptProps {
   settings: ThemeSettings;
 }
