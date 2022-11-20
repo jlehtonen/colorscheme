@@ -23,8 +23,9 @@ const getScript = (settings: ThemeSettings) => `
     return "${getDefaultTheme(themeTypes.light, settings.themes)}";
   }
 
+  const theme = getInitialTheme();
   const themes = ${JSON.stringify(settings.themes)};
-  document.documentElement.classList.add(themes[getInitialTheme()].class);
+  document.documentElement.classList.add(themes[theme].class);
 
   document
     .querySelector("meta[name='theme-color']")
