@@ -79,11 +79,12 @@ export const useTheme = (settings: ThemeSettings) => {
   };
 
   return {
-    theme: {
-      name: theme,
-      type: settings.themes[theme].type,
-    },
+    theme: loading
+      ? null
+      : {
+          name: theme,
+          type: settings.themes[theme].type,
+        },
     toggleTheme,
-    loading,
   };
 };
