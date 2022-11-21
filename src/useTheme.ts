@@ -78,5 +78,12 @@ export const useTheme = (settings: ThemeSettings) => {
     saveThemeSetting(actualNewTheme, settings.storageKey);
   };
 
-  return { theme, toggleTheme, loading };
+  return {
+    theme: {
+      name: theme,
+      type: settings.themes[theme].type,
+    },
+    toggleTheme,
+    loading,
+  };
 };
