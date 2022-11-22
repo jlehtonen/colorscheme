@@ -1,8 +1,5 @@
 {
   "name": "@jlehtonen/colorscheme",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/jlehtonen"
-  },
   "type": "module",
   "version": "0.2.0",
   "description": "Utilities for handling multiple color schemes in React/NextJS",
