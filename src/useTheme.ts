@@ -84,6 +84,7 @@ export const useTheme = (settings: ThemeSettings) => {
       : {
           name: theme,
           type: settings.themes[theme].type,
+          nextTheme: getNextTheme(theme, settings.themes),
         },
     toggleTheme,
   };
